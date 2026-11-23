@@ -7,11 +7,8 @@ body {
 }
 
 .contenido-principal {
-  width: 100%;
-  max-width: 1140px;
+  width: min(1100px, calc(100% - 40px));
   margin: 32px auto 48px;
-  padding-inline: 20px;
-  box-sizing: border-box;
 }
 
 .ruta-perfil {
@@ -81,5 +78,78 @@ section {
 }
 
 .ayuda-edicion p {
+  color: #667b8b;
+}
+
+button,
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  min-height: 42px;
+  border: 1px solid #dbe5eb;
+  border-radius: 20px;
+  padding: 0.6rem 1.2rem;
+  background: #ffffff;
+  color: #102f46;
+  font-family: "Manrope", sans-serif;
+  font-size: clamp(0.875rem, 0.8rem + 0.3vw, 1rem);
+  cursor: pointer;
+  transition: background-color 0.2s ease, outline 0.1s ease;
+}
+
+button.cancelar {
+  background-color: #ffffff;
+  color: #102f46;
+}
+
+button.añadir {
+  border: none;
+  background-color: rgb(43, 108, 148);
+  color: #ffffff;
+}
+
+button.descargar-cv {
+  border: none;
+  background-color: rgb(18, 39, 56);
+  color: #ffffff;
+}
+
+.grupo-formulario {
+  display: grid;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.grupo-formulario label {
+  font-weight: 700;
+}
+
+.grupo-formulario input {
+  width: auto;
+  min-width: 0;
+  min-height: 42px;
+  border: 1px solid #dbe5eb;
+  border-radius: 10px;
+  padding: 8px 10px;
+  font: inherit;
+}
+
+.fechas-experiencia {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.campo-fecha {
+  display: grid;
+  min-width: 0;
+  gap: 6px;
+}
+
+.pie-pagina {
+  border-top: 1px solid #dbe5eb;
+  padding: 20px;
+  text-align: center;
   color: #667b8b;
 }
