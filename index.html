@@ -45,11 +45,11 @@
     </header>
 
     <main>
-      <p>&lt; Volver</p>
+      <button>&lt; Volver</button>
       <p>Perfil</p>
       <h2>Tu historia, bien presentada.</h2>
 
-      <section style="border: 1px black solid; padding: 10px; margin-bottom: 10px;">
+      <section>
         <figure>
           <img src="img/icon.png" alt="Icono de perfil" width="100" height="100" />
           <figcaption>Imagen del perfil dentro del apartado curriculum</figcaption>
@@ -61,18 +61,48 @@
         <button>Mi CV</button>
       </section>
 
-      <section style="border: 1px black solid; padding: 10px; margin-bottom: 10px;">
-        <button style="float: right; width: 150px; height: 40px;">&plus; Añadir objeto</button>
-        <p>CURRÍCULUM</p> 
+      <section>
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+        <h2 style="margin: 0;">CURRÍCULUM</h2>
+        <button class="añadir">&plus; Añadir objeto</button>
+        </div>
         <p>Experiencia y formación</p>
         <p>Arrastra las tarjetas para cambiar el orden en el que aparecerán en tu CV.</p>
-        <button style="float: right;">&uparrow; Subir archivo</button>
-        <button style="float: right;">&downarrow; Descargar CV</button>
-        <br>
+        <div style="display: flex; justify-content: flex-end; gap: 10px;">
+        <button class="subir-archivo">&uparrow; Subir archivo</button>
+        <button class="descargar-cv">&downarrow; Descargar CV</button>
+        </div>
       </section>
 
-      <section style="border: 1px black solid; padding: 10px; margin-bottom: 10px;">
-        
+      <section>
+        <h2>EXPERIENCIA</h2>
+        <p>Puesto o experiencia</p>
+        <input id="experiencia" name="experiencia" />
+        <p>Empresa y detalles</p>
+        <input type="text" id="empresa" name="empresa" /> <br>
+        <input type="date" id="desde" name="desde" /> <span> - </span> <input type="date" id="hasta" name="hasta" />
+        <button class="cancelar">&cross; Cancelar</button>
+        <button class="añadir">&check; Guardar información</button>
+      </section>
+
+      <section>
+        <h2>FORMACIÓN</h2>
+        <p>Estudios o formación</p>
+        <input id="estudios" name="estudios" />
+        <p>Centro y detalles</p>
+        <input type="text" id="centro" name="centro" />
+        <button class="cancelar">&cross; Cancelar</button>
+        <button class="añadir">&check; Guardar información</button>
+      </section>
+
+      <section>
+        <h2>APTITUDES</h2>
+        <p>Aptitud o habilidad</p>
+        <input id="aptitud" name="aptitud" />
+        <p>Nivel o detalles</p>
+        <input type="text" id="nivel" name="nivel" />
+        <button class="cancelar">&cross; Cancelar</button>
+        <button class="añadir">&check; Guardar información</button>
       </section>
     </main>
 

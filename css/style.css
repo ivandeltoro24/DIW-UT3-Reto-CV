@@ -1,3 +1,4 @@
+/* TODO IA PARA EL HEADER*/
 * {
   box-sizing: border-box;
 }
@@ -121,3 +122,38 @@
     padding: 0 18px;
   }
 }
+
+/* ACABA LA IA SOLO PARA EL HEADER*/
+
+button{
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 10px;
+  width: fit-content;
+  height: fit-content;
+}
+
+section {
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+}
+
+button.cancelar{
+  background-color: white;
+  color: black;
+
+}
+
+button.añadir{
+  background-color: rgb(43, 108, 148);
+  color: white;
+}
+
+button.descargar-cv{
+  background-color: rgb(18, 39, 56);
+  color: white;
+}
+
+
