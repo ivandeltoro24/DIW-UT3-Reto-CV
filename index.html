@@ -1,111 +1,126 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vista Curriculum</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
+    <title>Vista Curriculum | Perfil de Usuario</title>
+    <meta
+      name="description"
+      content="Gestión y edición del perfil profesional y currículum vitae de Iván Del Toro Haro."
     />
+    <meta name="author" content="Iván Del Toro Haro" />
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <header class="site-header">
-      <a class="brand" href="#" aria-label="Ir al inicio">
-        <img
-          src="img/altair-centro-educativo.png"
-          alt="Altair Centro Educativo"
-        />
-      </a>
+    <main class="contenido-principal">
+      <button type="button" class="volver">&lt; Volver</button>
+      <p class="ruta-perfil">Perfil</p>
+      <h1>Tu historia, bien presentada.</h1>
 
-      <nav class="desktop-nav" aria-label="Navegación principal">
-        <a href="#">Inicio</a>
-        <a href="#">Horario</a>
-        <a href="#">Faltas</a>
-        <a href="#">Tutoría</a>
-        <a class="active" href="#">Mi perfil</a>
-      </nav>
-
-      <div class="header-actions">
-        <span class="term-pill">Curso 26/27</span>
-
-        <a class="avatar-button" href="#" aria-label="Ver perfil">
-          <img src="img/icon.png" alt="" />
-        </a>
-
-        <button class="icon-button" type="button" aria-label="Abrir menú">
-          <svg viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4 7h16M4 12h16M4 17h16"></path>
-          </svg>
-        </button>
-      </div>
-    </header>
-
-    <main>
-      <button>&lt; Volver</button>
-      <p>Perfil</p>
-      <h2>Tu historia, bien presentada.</h2>
-
-      <section>
-        <figure>
-          <img src="img/icon.png" alt="Icono de perfil" width="100" height="100" />
-          <figcaption>Imagen del perfil dentro del apartado curriculum</figcaption>
-        </figure>
-        <p>Iván Del Toro Haro</p>
-        <p>Estudiante · 2ºDAW </p>
-        <button style="margin-bottom: 10px;">Mis datos</button>
-        <br>
-        <button>Mi CV</button>
+      <section class="resumen-perfil" aria-label="Resumen del perfil">
+        <article class="tarjeta-perfil">
+          <figure>
+            <img
+              src="img/icon.png"
+              alt="Fotografía de perfil de Iván Del Toro Haro"
+              width="100"
+              height="100"
+              loading="lazy"
+            />
+            <figcaption>
+              Imagen del perfil dentro del apartado currículum
+            </figcaption>
+          </figure>
+          <h2>Iván Del Toro Haro</h2>
+          <p>Estudiante · 2º DAW</p>
+          <button type="button" class="boton-mis-datos">Mis datos</button>
+          <button type="button">Mi CV</button>
+        </article>
       </section>
 
-      <section>
-        <div style="display: flex; justify-content: space-between; align-items: center;">
-        <h2 style="margin: 0;">CURRÍCULUM</h2>
-        <button class="añadir">&plus; Añadir objeto</button>
+      <section class="resumen-curriculum">
+        <div class="acciones-titulo-curriculum">
+          <h2>CURRÍCULUM</h2>
+          <button type="button" class="añadir">Añadir objeto</button>
         </div>
-        <p>Experiencia y formación</p>
-        <p>Arrastra las tarjetas para cambiar el orden en el que aparecerán en tu CV.</p>
-        <div style="display: flex; justify-content: flex-end; gap: 10px;">
-        <button class="subir-archivo">&uparrow; Subir archivo</button>
-        <button class="descargar-cv">&downarrow; Descargar CV</button>
+        <h3>Experiencia y formación</h3>
+        <p>
+          Arrastra las tarjetas para cambiar el orden en el que aparecerán en tu
+          CV final.
+        </p>
+        <div class="barra-herramientas">
+          <button type="button" class="subir-archivo">Subir archivo</button>
+          <button type="button" class="descargar-cv">Descargar CV</button>
         </div>
       </section>
 
-      <section>
+      <section class="experiencia-cv">
         <h2>EXPERIENCIA</h2>
-        <p>Puesto o experiencia</p>
-        <input id="experiencia" name="experiencia" />
-        <p>Empresa y detalles</p>
-        <input type="text" id="empresa" name="empresa" /> <br>
-        <input type="date" id="desde" name="desde" /> <span> - </span> <input type="date" id="hasta" name="hasta" />
-        <button class="cancelar">&cross; Cancelar</button>
-        <button class="añadir">&check; Guardar información</button>
+        <form action="#" method="post">
+          <div class="grupo-formulario">
+            <label for="experiencia">Puesto o experiencia</label>
+            <input type="text" id="experiencia" name="experiencia" />
+          </div>
+          <div class="grupo-formulario">
+            <label for="empresa">Empresa y detalles</label>
+            <input type="text" id="empresa" name="empresa" />
+          </div>
+          <div class="grupo-formulario fechas-experiencia">
+            <div class="campo-fecha">
+              <label for="fecha-desde">Fecha desde</label>
+              <input type="date" id="fecha-desde" name="fecha-desde" />
+            </div>
+            <div class="campo-fecha">
+              <label for="fecha-hasta">Fecha hasta</label>
+              <input type="date" id="fecha-hasta" name="fecha-hasta" />
+            </div>
+          </div>
+          <div class="acciones-formulario">
+            <button type="button" class="cancelar">Cancelar</button>
+            <button type="button" class="añadir">Guardar información</button>
+          </div>
+        </form>
       </section>
 
-      <section>
+      <section class="formacion-cv">
         <h2>FORMACIÓN</h2>
-        <p>Estudios o formación</p>
-        <input id="estudios" name="estudios" />
-        <p>Centro y detalles</p>
-        <input type="text" id="centro" name="centro" />
-        <button class="cancelar">&cross; Cancelar</button>
-        <button class="añadir">&check; Guardar información</button>
+        <form action="#" method="post">
+          <div class="grupo-formulario">
+            <label for="estudios">Estudios o formación</label>
+            <input type="text" id="estudios" name="estudios" />
+          </div>
+          <div class="grupo-formulario">
+            <label for="centro">Centro y detalles</label>
+            <input type="text" id="centro" name="centro" />
+          </div>
+          <div class="acciones-formulario">
+            <button type="button" class="cancelar">Cancelar</button>
+            <button type="button" class="añadir">Guardar información</button>
+          </div>
+        </form>
       </section>
 
-      <section>
+      <section class="aptitudes-cv">
         <h2>APTITUDES</h2>
-        <p>Aptitud o habilidad</p>
-        <input id="aptitud" name="aptitud" />
-        <p>Nivel o detalles</p>
-        <input type="text" id="nivel" name="nivel" />
-        <button class="cancelar">&cross; Cancelar</button>
-        <button class="añadir">&check; Guardar información</button>
+        <form action="#" method="post">
+          <div class="grupo-formulario">
+            <label for="aptitud">Aptitud o habilidad</label>
+            <input type="text" id="aptitud" name="aptitud" />
+          </div>
+          <div class="grupo-formulario">
+            <label for="nivel">Nivel o detalles</label>
+            <input type="text" id="nivel" name="nivel" />
+          </div>
+          <div class="acciones-formulario">
+            <button type="button" class="cancelar">Cancelar</button>
+            <button type="button" class="añadir">Guardar información</button>
+          </div>
+        </form>
       </section>
     </main>
 
-    <script src="js/script.js"></script>
+    <footer class="pie-pagina">
+      <p>&copy; 2026 Iván Del Toro Haro. Todos los derechos reservados.</p>
+    </footer>
   </body>
 </html>
